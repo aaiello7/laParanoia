@@ -1,0 +1,18 @@
+<%- include('partials/header'); -%>
+  <div class="container mx-auto pb-5">
+    <div class="row">
+      <% articles.forEach(function(art){ %>
+        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 mx-auto">
+        <div class="card mb-4 shadow">
+          <img class="card-img-top p-3" src="<%= art.image %>" alt="Post Image">
+          <div class="card-body">
+            <h5 class="card-title"><%= art.title %></h5>
+            <a href="/portfolio/<%= art.title %>" class="card-link"></a>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+
+<%- include('partials/footer'); -%>

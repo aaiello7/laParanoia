@@ -1,0 +1,28 @@
+<%- include('partials/header'); -%>
+
+<div id="body">
+  <div class="row">
+    <div class="container col-lg-5 col-md-12">
+      <img class="image" src="images/contact.png" alt="Contact">
+    </div>
+    <div class="container col-lg-5 col-md-9 col-sm-12">
+      <h1>Contact</h1>
+      <p>Let's get in touch! Email me at <a href="mailto: laparanoia.info@gmail.com">laparanoia.info@gmail.com</a> or just fill in the form below.<br> I'll keep an eye on my inbox!</p>
+      <form class="container" action="/contactForm" method="post">
+        <!-- Title -->
+        <div class="form-group">
+          <label for="contactEmail">Email:</label>
+          <input name="contactEmail" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <!-- Details -->
+        <div class="form-group">
+          <label for="contactDetail">Message:</label>
+          <textarea name="contactDetail" class="form-control" maxlength="300" rows="3" placeholder="Message"></textarea>
+        </div>
+        <button class="btn btn-primary btn-block border-shadow" type="submit">Contact</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer'); -%>

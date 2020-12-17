@@ -1,0 +1,60 @@
+<%- include('partials/header'); -%>
+
+<div id="body" class="container">
+  <h1 class="my-4 p-3">Nueva página de portafolio</h1>
+  <form class="container p3" action="/entryData" method="post" enctype="multipart/form-data">
+    <!-- Image -->
+    <div class="form-group">
+      <label for="postImg">Imagen:</label>
+      <div class="col-sm-4 px-0">
+        <div class="input-group mb-3">
+          <div class="custom-file">
+            <input name="postImg" type="file" class="custom-file-input" id="inputGroupFile">
+            <label class="custom-file-label" for="inputGroupFile">Choose image</label>
+          </div>
+        </div>
+        <div class="border rounded-lg text-center p-3">
+          <img src="../images/icons/pic.svg" class="img-fluid" id="preview" />
+        </div>
+      </div>
+    </div>
+    <!-- Title -->
+    <div class="form-group">
+      <label for="postTitle">Titulo:</label>
+      <input name="postTitle" type="text" class="form-control">
+    </div>
+
+    <!-- Details -->
+    <div class="form-group">
+      <label for="postDetail">Detalles:</label>
+      <textarea name="postDetail" class="form-control" maxlength="300" rows="3"></textarea>
+    </div>
+    <!-- Content -->
+    <div class="form-group">
+      <label for="postCont">Descripción:</label>
+      <textarea name="postCont" class="form-control" rows="3"></textarea>
+    </div>
+    <!-- Checkbox -->
+    <div class="form-check mt-4">
+      <input class="form-check-input mt-2" type="radio" name="postType" id="artCheck" value="article" checked>
+      <label class="form-check-label" for="artCheck">
+        Article
+      </label>
+    </div>
+    <div class="form-check mb-4">
+      <input class="form-check-input mt-2" type="radio" name="postType" id="expoCheck" value="expo">
+      <label class="form-check-label" for="expoCheck">
+        Expo-piece
+      </label>
+    </div>
+
+    <button class="btn btn-primary btn-block" type="submit">Post</button>
+  </form>
+</div>
+
+
+<script src="/scripts/bs-custom-file-input.js"></script>
+
+
+
+<%- include('partials/footer'); -%>
