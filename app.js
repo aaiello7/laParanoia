@@ -10,6 +10,7 @@ const path = require("path");
 const nodemailer = require("nodemailer");
 
 
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -22,6 +23,7 @@ app.use(bodyParser.urlencoded({
 app.use('*/css', express.static('public/css'));
 app.use('*/scripts', express.static('public/scripts'));
 app.use('*/images', express.static('public/images'));
+
 
 //Initialize DB and collections
 mongoose.connect(process.env.DBPATH, {
