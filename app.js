@@ -114,7 +114,7 @@ app.get("/post-entry", function(req, res) {
 //New Article to DB
 app.post("/entryData", upload.single('postImg'), function(req, res, next) {
   article = new Article({
-    image: "images/" + req.file.filename,
+    image: req.file.filename,
     title: req.body.postTitle.trim(),
     detail: req.body.postDetail,
     content: req.body.postCont,
